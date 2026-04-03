@@ -28,6 +28,8 @@ const BookForm: React.FC<BookFormProps> = ({ onSubmit, onCancel }) => {
         stockQuantity: 0,
         publishedDate: '',
         category: '',
+        // TODO, remove this after we have userId
+        userId: 1
     });
 
     const [errors, setErrors] = useState<FormErrors>({});
@@ -37,8 +39,6 @@ const BookForm: React.FC<BookFormProps> = ({ onSubmit, onCancel }) => {
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ): void => {
         const { name, value } = e.target;
-        console.log('name,' , name);
-        console.log('value', value);
 
         setFormData((prev) => ({
             ...prev,

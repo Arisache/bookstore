@@ -48,7 +48,7 @@ public class UserService {
     @Transactional
     public UserDTO updateUser(Long id, UpdateUserRequest userRequest) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + userRequest.getId()));
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + userRequest.getEmail()));
 
         userMapper.updateEntityFromRequest(userRequest, user);
         User saved = userRepository.save(user);

@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Builder
 public class CreateBookRequest {
     // This is the userId tied to the user (multiple books on the same user)
-    @NotNull(message = "Price is required")
+    @NotNull(message = "User is required")
     private Long userId;
 
     @NotBlank(message = "Title is required")

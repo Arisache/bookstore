@@ -21,6 +21,7 @@ export interface CreateBookRequest {
     stockQuantity: number;
     publishedDate: string;
     category: string;
+    userId: number;
 }
 
 export interface UpdateBookRequest {
