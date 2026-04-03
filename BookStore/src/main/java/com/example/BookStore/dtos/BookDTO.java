@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class BookDTO {
-
     private Long id;
 
     @NotBlank(message = "Title is required")
